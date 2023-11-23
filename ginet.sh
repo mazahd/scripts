@@ -27,7 +27,7 @@ RESULT="ip=${IP_ADDR}::${IP_GATEWAY}:${IP_NETMASK}::${INTERFACE}:none"
 echo $RESULT
 
 
-sed -i 's/ip=<ipv4_address>::<ipv4_gateway>:<ipv4_netmask>::<interface>:none/ip=$RESULT/g' /etc/nixos/initrd.nix
+sed "s/ip=<ipv4_address>::<ipv4_gateway>:<ipv4_netmask>::<interface>:none/ip=$RESULT/g" /Users/dcod3/code/config/initrd.nix
 
 # Uncomment the following line to save to a file
 # echo $RESULT > /path/to/output/file
