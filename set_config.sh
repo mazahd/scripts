@@ -12,3 +12,6 @@ function git_file() {
 mkdir -p ~/.config/{tmux,helix}
 git_file mazahd/config tmux.conf ~/.config/tmux/
 git_file mazahd/config config.toml ~/.config/helix/
+
+
+tmux source ~/.config/tmux/tmux.conf
