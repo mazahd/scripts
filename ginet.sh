@@ -25,6 +25,10 @@ RESULT="ip=${IP_ADDR}::${IP_GATEWAY}:${IP_NETMASK}::${INTERFACE}:none"
 
 # Save to a file or output
 echo $RESULT
+
+
+sed -i 's/ip=<ipv4_address>::<ipv4_gateway>:<ipv4_netmask>::<interface>:none/ip=$RESULT/g' /etc/nixos/initrd.nix
+
 # Uncomment the following line to save to a file
 # echo $RESULT > /path/to/output/file
 
