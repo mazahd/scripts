@@ -139,7 +139,7 @@ ls
 
 curl -o /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/mazahd/config/main/configuration.nix
 
-sed -i "s/networking\.hostId = \"[^\"]*\"/networking.hostId = \"$(head -c 8 /etc/machine-id)\"/" file
+sed -i "s/networking\.hostId = \"[^\"]*\"/networking.hostId = \"$(head -c 8 /etc/machine-id)\"/" /mnt/etc/nixos/configuration.nix
 
 curl -o /mnt/etc/nixos/initrd.nix https://raw.githubusercontent.com/mazahd/config/main/initrd.nix
 
